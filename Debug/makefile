@@ -60,8 +60,8 @@ all: main-build
 main-build: projectMicrocon.elf secondary-outputs
 
 # Tool invocations
-projectMicrocon.elf projectMicrocon.map: $(OBJS) $(USER_OBJS) C:\Users\MSI\STM32CubeIDE\workspace_1.19.0\projectMicrocon\STM32F767ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "projectMicrocon.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\MSI\STM32CubeIDE\workspace_1.19.0\projectMicrocon\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projectMicrocon.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+projectMicrocon.elf projectMicrocon.map: $(OBJS) $(USER_OBJS) C:\Users\MSI\Desktop\SOFTDEVGO\MicroconProjectSTM32\STM32F767ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "projectMicrocon.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\MSI\Desktop\SOFTDEVGO\MicroconProjectSTM32\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="projectMicrocon.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
